@@ -24,7 +24,7 @@ protocol RootPresentableListener: class {
     // interactor class.
 }
 
-final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
+final class RootViewController: UIViewController, RootPresentable, RootViewControllable, LoggedInViewControllable {
 
     weak var listener: RootPresentableListener?
 
@@ -46,5 +46,11 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
 
     func present(viewController: ViewControllable) {
         present(viewController.uiviewController, animated: true, completion: nil)
+    }
+    
+    func dismiss(viewController: ViewControllable) {
+        if presentedViewController === viewController.uiviewController {
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
