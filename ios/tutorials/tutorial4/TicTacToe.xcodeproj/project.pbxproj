@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07F429D020F3FF9000FD1CFD /* LoggedInActionableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F429CF20F3FF9000FD1CFD /* LoggedInActionableItem.swift */; };
+		07F429D320F4020900FD1CFD /* LaunchGameWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F429D220F4020900FD1CFD /* LaunchGameWorkflow.swift */; };
 		7EDD59501FA13579005EC8B2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EDD594F1FA13579005EC8B2 /* Default-568h@2x.png */; };
 		AEFA38604D7D1E4A08E9A7FA /* Pods_TicTacToe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99EABB5C8D25341027C05C5 /* Pods_TicTacToe.framework */; };
-		E90A68661FB7052F00D303EE /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C86D9F1FA389F400B61DF6 /* Stub.swift */; };
 		E9C86DA01FA38A0A00B61DF6 /* RandomWinBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C86D9A1FA389EC00B61DF6 /* RandomWinBuilder.swift */; };
 		E9C86DA11FA38A0A00B61DF6 /* RandomWinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C86D9B1FA389EC00B61DF6 /* RandomWinInteractor.swift */; };
 		E9C86DA21FA38A0A00B61DF6 /* RandomWinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C86D9C1FA389EC00B61DF6 /* RandomWinRouter.swift */; };
@@ -53,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07F429CF20F3FF9000FD1CFD /* LoggedInActionableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInActionableItem.swift; sourceTree = "<group>"; };
+		07F429D220F4020900FD1CFD /* LaunchGameWorkflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchGameWorkflow.swift; sourceTree = "<group>"; };
 		7EDD594F1FA13579005EC8B2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		833B15CABE3CBE09720A0409 /* Pods-TicTacToe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicTacToe/Pods-TicTacToe.debug.xcconfig"; sourceTree = "<group>"; };
 		A791EBDAD202886E66137B9C /* Pods-TicTacToe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicTacToe/Pods-TicTacToe.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +70,6 @@
 		E9C86D9B1FA389EC00B61DF6 /* RandomWinInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWinInteractor.swift; sourceTree = "<group>"; };
 		E9C86D9C1FA389EC00B61DF6 /* RandomWinRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWinRouter.swift; sourceTree = "<group>"; };
 		E9C86D9D1FA389EC00B61DF6 /* RandomWinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWinViewController.swift; sourceTree = "<group>"; };
-		E9C86D9F1FA389F400B61DF6 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 		E9C86DA61FA38AD000B61DF6 /* PlayerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerType.swift; sourceTree = "<group>"; };
 		E9C86DA71FA38AD000B61DF6 /* ScoreStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreStream.swift; sourceTree = "<group>"; };
 		E9C86DB81FA38D4700B61DF6 /* RootActionableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootActionableItem.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07F429D120F401F800FD1CFD /* Workflows */ = {
+			isa = PBXGroup;
+			children = (
+				07F429D220F4020900FD1CFD /* LaunchGameWorkflow.swift */,
+			);
+			path = Workflows;
+			sourceTree = "<group>";
+		};
 		59F943336420DE07CA779F6F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +162,7 @@
 		E9894B4C1F972CC500688FCB /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				07F429D120F401F800FD1CFD /* Workflows */,
 				7EDD59511FA135E9005EC8B2 /* Resources */,
 				E9C86DB71FA38D4700B61DF6 /* ActionableItems */,
 				E9CB1D331F972FD500D84847 /* AppStart */,
@@ -194,7 +205,6 @@
 		E9C86D9E1FA389F400B61DF6 /* Promo */ = {
 			isa = PBXGroup;
 			children = (
-				E9C86D9F1FA389F400B61DF6 /* Stub.swift */,
 			);
 			path = Promo;
 			sourceTree = "<group>";
@@ -212,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				E9C86DB81FA38D4700B61DF6 /* RootActionableItem.swift */,
+				07F429CF20F3FF9000FD1CFD /* LoggedInActionableItem.swift */,
 			);
 			path = ActionableItems;
 			sourceTree = "<group>";
@@ -307,7 +318,6 @@
 				E9894B471F972CC500688FCB /* Frameworks */,
 				E9894B481F972CC500688FCB /* Resources */,
 				01C0219C62DB08840E36B78D /* [CP] Embed Pods Frameworks */,
-				D0E4ECFC9A8F9EAE85892FE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -406,21 +416,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D0E4ECFC9A8F9EAE85892FE7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TicTacToe/Pods-TicTacToe-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -441,7 +436,6 @@
 				E9C86DA91FA38AEC00B61DF6 /* PlayerType.swift in Sources */,
 				E9CB1D631F9730EF00D84847 /* RootComponent+LoggedOut.swift in Sources */,
 				E9CB1D591F9730E700D84847 /* LoggedOutBuilder.swift in Sources */,
-				E90A68661FB7052F00D303EE /* Stub.swift in Sources */,
 				E9CB1D581F9730E400D84847 /* LoggedInRouter.swift in Sources */,
 				E9CB1D5F1F9730EB00D84847 /* OffGameRouter.swift in Sources */,
 				E9CB1D611F9730EF00D84847 /* RootBuilder.swift in Sources */,
@@ -456,6 +450,7 @@
 				E9CB1D531F97305A00D84847 /* AppComponent.swift in Sources */,
 				E9CB1D621F9730EF00D84847 /* RootComponent+LoggedIn.swift in Sources */,
 				E9CB1D5C1F9730E700D84847 /* LoggedOutViewController.swift in Sources */,
+				07F429D020F3FF9000FD1CFD /* LoggedInActionableItem.swift in Sources */,
 				E9C86DA81FA38AD600B61DF6 /* ScoreStream.swift in Sources */,
 				E9CB1D691F9730F300D84847 /* TicTacToeRouter.swift in Sources */,
 				E9C86DA01FA38A0A00B61DF6 /* RandomWinBuilder.swift in Sources */,
@@ -465,6 +460,7 @@
 				E9C86DB11FA38B7D00B61DF6 /* BasicScoreBoardInteractor.swift in Sources */,
 				E9C86DB21FA38B7D00B61DF6 /* BasicScoreBoardRouter.swift in Sources */,
 				E9C86DBD1FA3AD6400B61DF6 /* Game.swift in Sources */,
+				07F429D320F4020900FD1CFD /* LaunchGameWorkflow.swift in Sources */,
 				E9C86DA11FA38A0A00B61DF6 /* RandomWinInteractor.swift in Sources */,
 				E9CB1D5E1F9730EB00D84847 /* OffGameInteractor.swift in Sources */,
 				E9CB1D5A1F9730E700D84847 /* LoggedOutInteractor.swift in Sources */,

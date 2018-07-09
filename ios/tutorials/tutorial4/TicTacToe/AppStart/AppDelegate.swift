@@ -18,10 +18,18 @@ import RIBs
 import RxSwift
 import UIKit
 
+protocol UrlHandler: class {
+    
+    func handle(_ url: URL)
+    
+}
+
 /// Game app delegate.
 @UIApplicationMain
 public class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - UIApplicationDelegate
+    
     /// The window.
     public var window: UIWindow?
 
@@ -35,15 +43,22 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
     public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-
-        let launchRouter = RootBuilder(dependency: AppComponent()).build()
-        self.launchRouter = launchRouter
-        launchRouter.launch(from: window)
-
+        
+        let result = RootBuilder(dependency: AppComponent()).build()
+        launchRouter = result.launchRouter
+        urlHandler = result.urlHandler
+        launchRouter?.launch(from: window)
+        
+        return true
+    }
+    
+    public func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        urlHandler?.handle(url)
         return true
     }
 
     // MARK: - Private
 
     private var launchRouter: LaunchRouting?
+    private var urlHandler: UrlHandler?
 }

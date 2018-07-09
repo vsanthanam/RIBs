@@ -27,8 +27,8 @@ protocol LoggedInListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class LoggedInInteractor: Interactor, LoggedInInteractable {
-
+final class LoggedInInteractor: Interactor, LoggedInInteractable, LoggedInActionableItem {
+    
     weak var router: LoggedInRouting?
     weak var listener: LoggedInListener?
 
@@ -64,6 +64,20 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable {
         router?.routeToOffGame(with: games)
     }
 
+    // MARK: - LoggedInActionableItem
+    
+    func launchGame(with id: String?) -> Observable<(LoggedInActionableItem, ())> {
+        let game: Game? = games.first { game in
+            return game.id.lowercased() == id?.lowercased()
+        }
+        
+        if let game = game {
+            router?.routeToGame(with: game.builder)
+        }
+        
+        return Observable.just((self, ()))
+    }
+    
     // MARK: - Private
 
     private var games = [Game]()
