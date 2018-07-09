@@ -73,10 +73,6 @@ final class TicTacToeInteractor: PresentableInteractor<TicTacToePresentable>, Ti
         }
     }
 
-    func closeGame() {
-        listener?.gameDidEnd(withWinner: self.checkWinner())
-    }
-
     // MARK: - Private
 
     private var currentPlayer = PlayerType.player1
